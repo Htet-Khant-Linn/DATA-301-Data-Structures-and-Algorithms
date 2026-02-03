@@ -41,7 +41,7 @@ The repository is organized into the following directories:
 To explore the code, you can clone this repository to your local machine:
 
 ```bash
-https://github.com/Htet-Khant-Linn/DATA-301-Data-Structures-and-Algorithms.git
+git clone https://github.com/Htet-Khant-Linn/DATA-301-Data-Structures-and-Algorithms.git
 ```
 
 ## ⚠️ Disclaimer
