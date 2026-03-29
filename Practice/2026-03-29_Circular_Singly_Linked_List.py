@@ -125,6 +125,7 @@ class CircularLinkedList():
         self.tail = None
         self.length = 0
 
+
 new_circular_linked_list = CircularLinkedList()
 new_circular_linked_list.append(10)
 new_circular_linked_list.append(20)
