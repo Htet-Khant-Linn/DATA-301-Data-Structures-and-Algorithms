@@ -19,13 +19,14 @@ class Queue:
     def enqueue(self, value):
         self.items.append(value)    # add element at the end
         self.length += 1
+        return f"Successfully added {value} to the queue."
     
     def dequeue(self):
         if self.is_empty():     # check for empty queue
             return "This is the empty queue."
         else:
             self.length -= 1
-            return self.items.pop(0)    # remove the first element from the queue
+            return f"Successfully removed {self.items.pop(0)} from the queue."    # remove the first element from the queue
         
     def peek(self):
         if self.is_empty():     # check for empty queue
@@ -41,39 +42,29 @@ class Queue:
         self.length = 0
         return "Queue has successfully been cleared."
 
-    def traverse(self):     # I tested traverse as well
-        if self.is_empty():
-            return "This is the empty queue."
-        else:
-            for i in self.items:
-                print(i)
-
 
 new_queue_list = Queue()
 
 print("Enqueue")
-new_queue_list.enqueue(10)
-new_queue_list.enqueue(20)
-new_queue_list.enqueue(30)
+print(new_queue_list.enqueue(10))
+print(new_queue_list.enqueue(20))
+print(new_queue_list.enqueue(30))
 print(new_queue_list)
 print()
 
 print("Dequeue")
-new_queue_list.dequeue()
+print(new_queue_list.dequeue())
 print(new_queue_list)
 print()
 
 print("Enqueue")
-new_queue_list.enqueue(40)
-new_queue_list.enqueue(50)
+print(new_queue_list.enqueue(40))
+print(new_queue_list.enqueue(50))
+print(new_queue_list)
 print()
 
 print("Peek")
 print(new_queue_list.peek())
-print()
-
-print("Traverse")
-new_queue_list.traverse()
 print()
 
 print(new_queue_list)
