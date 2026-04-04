@@ -177,8 +177,8 @@ def getDeepestNode(rootNode):
         deepestNode = root.value
         return deepestNode
     
-# deepestNode = getDeepestNode(newBT)
-# print(deepestNode.data)
+deepestNode = getDeepestNode(newBT)
+print(deepestNode.data)
 
 def deleteDeepestNode(rootNode, deleteNode):
     if not rootNode:
@@ -209,39 +209,39 @@ def deleteDeepestNode(rootNode, deleteNode):
 # deleteDeepestNode(newBT, deleteNode)
 # levelOrderTraversal(newBT)
 
-def deleteNodeBT(rootNode, node):
-    if not rootNode:
-        return 'The BT does not exist'
+# def deleteNodeBT(rootNode, node):
+#     if not rootNode:
+#         return 'The BT does not exist'
     
-    customQueue = queue.Queue()
-    customQueue.enqueue(rootNode)
+#     customQueue = queue.Queue()
+#     customQueue.enqueue(rootNode)
 
-    while not customQueue.is_empty():
-        root = customQueue.dequeue().value
+#     while not customQueue.is_empty():
+#         root = customQueue.dequeue().value
 
-        if root.data == node:
-            deepestNode = getDeepestNode(rootNode)
-            root.data = deepestNode.data
-            deleteDeepestNode(rootNode, deepestNode)
-            return 'The node has been successfully deleted'
+#         if root.data == node:
+#             deepestNode = getDeepestNode(rootNode)
+#             root.data = deepestNode.data
+#             deleteDeepestNode(rootNode, deepestNode)
+#             return 'The node has been successfully deleted'
         
-        if root.leftChild is not None:
-            customQueue.enqueue(root.leftChild)
+#         if root.leftChild is not None:
+#             customQueue.enqueue(root.leftChild)
 
-        if root.rightChild is not None:
-            customQueue.enqueue(root.rightChild)
+#         if root.rightChild is not None:
+#             customQueue.enqueue(root.rightChild)
 
-    return "Failed to delete"
+#     return "Failed to delete"
 
-# print(deleteNodeBT(newBT, "Hot"))
+# # print(deleteNodeBT(newBT, "Hot"))
+# # levelOrderTraversal(newBT)
+
+# def deleteBT(rootNode):
+#     rootNode.data = None
+#     rootNode.leftChild = None
+#     rootNode.rightChild = None
+#     return "The BT has been successfully deleted"
+
+# print(deleteBT(newBT))
 # levelOrderTraversal(newBT)
-
-def deleteBT(rootNode):
-    rootNode.data = None
-    rootNode.leftChild = None
-    rootNode.rightChild = None
-    return "The BT has been successfully deleted"
-
-print(deleteBT(newBT))
-levelOrderTraversal(newBT)
         
